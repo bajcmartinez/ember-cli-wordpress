@@ -2,12 +2,23 @@
 
 Helps you connect your Ember application to a Wordpress site through the standard WP API.
 
+## Demo
+
+My personal website:
+Real live demo: https://bajcmartinez.com
+Git repository: https://github.com/bajcmartinez/bajcmartinez.com
+
+Dummy in-repo App:
+* `ember serve`
+* Visit your app at [http://localhost:4200](http://localhost:4200).
+
 ## How to use
 
 Make sure you're using ember-cli and ember data > 2.
 
 1. `ember install ember-cli-wordpress`
-2. Define the address to your Wordpress install as `wordpressHost` in `config/environment.js`
+2. `ember install ember-get-config`
+3. Define the address to your Wordpress install as `wordpressHost` in `config/environment.js`
 
 Example:
 
@@ -24,7 +35,12 @@ var ENV = {
 ```
 ## The super cool models
 
-Out of the box we provide you models for 'post', 'category', 'tag' and 'user'.
+Out of the box we provide you models for 
+
+* post
+* category
+* tag
+* user
 
 ## Questions? Need help?
 
