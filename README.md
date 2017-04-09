@@ -1,13 +1,34 @@
 # ember-wp-data [![Build Status](https://travis-ci.org/bajcmartinez/ember-wp-data.svg?branch=master)](https://travis-ci.org/bajcmartinez/ember-wp-data)
 
-This README outlines the details of collaborating on this Ember addon.
+Helps you connect your Ember application to a Wordpress site through the standard WP API.
 
-## Installation
+## How to use
 
-* `git clone <repository-url>` this repository
-* `cd ember-wp-data`
-* `npm install`
-* `bower install`
+Make sure you're using ember-cli and ember data > 2.
+
+1. `ember install ember-wordpress`
+2. Define the address to your Wordpress install as `wordpressHost` in `config/environment.js`
+
+Example:
+
+```
+var ENV = {
+  ...
+  APP: {
+    // Here you can pass flags/options to your application instance
+    // when it is created
+    wordpressHost: 'http://example.com'
+  }
+  ...
+}
+```
+## The super cool models
+
+Out of the box we provide you models for 'post', 'category', 'tag' and 'user'.
+
+## Questions? Need help?
+
+I just started this project, and there is still a long way to go, but the addon is working and I'll maintain the tests updated. Please if you have anny uses report them on https://github.com/bajcmartinez/ember-wp-data/issues so I can help you fixing it!.
 
 ## Running
 
