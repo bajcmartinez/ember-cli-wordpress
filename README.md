@@ -1,4 +1,4 @@
-# ember-wp-data
+# ember-wp-data [![Build Status](https://travis-ci.org/bajcmartinez/ember-wp-data.svg?branch=master)](https://travis-ci.org/bajcmartinez/ember-wp-data)
 
 This README outlines the details of collaborating on this Ember addon.
 
