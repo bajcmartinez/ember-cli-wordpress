@@ -1,0 +1,23 @@
+<h1>Posts</h1>
+
+{{#each model as |post|}}
+  <div class="post">
+    <h3>{{post.title}}</h3> by {{post.author.name}}
+    <p>Categories:</p>
+    <ul>
+      {{#each post.categories as |term|}}
+        <li>{{term.name}}</li>
+      {{/each}}
+    </ul>
+    <div>
+      {{{post.content}}}
+    </div>
+
+    <p>Tags:</p>
+    <ul>
+      {{#each post.tags as |term|}}
+        <li>{{term.name}}</li>
+      {{/each}}
+    </ul>
+  </div>
+{{/each}}

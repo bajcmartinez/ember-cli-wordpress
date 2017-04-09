@@ -1,13 +1,10 @@
-export default function(server) {
+/* global server */
+import { test } from 'qunit';
+import moduleForAcceptance from '../../tests/helpers/module-for-acceptance';
 
-  /*
-    Seed your development database using your factories.
-    This data will not be loaded in your tests.
+moduleForAcceptance('Acceptance | post');
 
-    Make sure to define a factory for each model you want to create.
-  */
-
-  // server.createList('post', 10);
+function createFakeData(server) {
   let categories = server.createList('category', 2);
   let tags = server.createList('tag', 3);
 
@@ -22,3 +19,14 @@ export default function(server) {
   let user2 = server.create('user');
   server.createList('post', 1, { author: user2.id, tags: tags2, categories: categories2 });
 }
+
+test('posts are displayed /', assert => {
+  createFakeData(server);
+
+  visit('/');
+
+  andThen(function() {
+    assert.equal(currentURL(), '/');
+    assert.equal(find('.post').length, 3);
+  });
+});
