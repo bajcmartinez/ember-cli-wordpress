@@ -1,1 +1,1 @@
-export { default } from 'ember-wp-data/serializers/wordpress';
+export { default } from 'ember-cli-wordpress/serializers/wordpress';

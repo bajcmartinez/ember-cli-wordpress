@@ -1,1 +1,1 @@
-export { default } from 'ember-wp-data/models/user';
+export { default } from 'ember-cli-wordpress/models/user';

@@ -7,10 +7,10 @@ export default DS.Model.extend({
   title: DS.attr('string'),
   content: DS.attr('string'),
   excerpt: DS.attr('string'),
-  featuredMedia: DS.attr('number'),
   format: DS.attr('string'),
 
   author: DS.belongsTo('user', {async: true}),
   categories: DS.hasMany('category', {async: true}),
-  tags: DS.hasMany('tag', {async: true})
+  tags: DS.hasMany('tag', {async: true}),
+  featuredMedia: DS.belongsTo('media', {async: true})
 });

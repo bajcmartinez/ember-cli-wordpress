@@ -1,1 +1,1 @@
-export { default } from 'ember-wp-data/adapters/wordpress';
+export { default } from 'ember-cli-wordpress/adapters/wordpress';

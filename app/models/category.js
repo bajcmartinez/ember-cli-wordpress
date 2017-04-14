@@ -1,1 +1,1 @@
-export { default } from 'ember-wp-data/models/category';
+export { default } from 'ember-cli-wordpress/models/category';

@@ -1,1 +1,1 @@
-export { default } from 'ember-wp-data/mirage-models/category';
+export { default } from 'ember-cli-wordpress/mirage-models/category';

@@ -2,8 +2,7 @@ import Ember from 'ember';
 import DS from 'ember-data';
 
 export default DS.RESTSerializer.extend({
-  // Here we wrap the payload in a named object after the model type
-  // because this is what Ember expects { post: { datahere } }
+  // Since the data in WP comes without the type, we need to add it { post: { datahere } }
   normalizeSingleResponse(store, primaryModelClass, payload, id, requestType) {
     var payloadTemp = {};
     payloadTemp[primaryModelClass.modelName] = [payload];
@@ -34,5 +33,13 @@ export default DS.RESTSerializer.extend({
       resourceHash.excerpt = resourceHash.excerpt.rendered;
     }
     return this._super(modelClass, resourceHash, prop);
+  },
+
+  keyForAttribute(key) {
+    return Ember.String.underscore(key);
+  },
+
+  keyForRelationship(key) {
+    return Ember.String.underscore(key);
   }
 });

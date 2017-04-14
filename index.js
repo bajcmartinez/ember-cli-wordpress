@@ -2,5 +2,5 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-wp-data'
+  name: 'ember-cli-wordpress'
 };

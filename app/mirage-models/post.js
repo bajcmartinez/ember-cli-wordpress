@@ -1,1 +1,1 @@
-export { default } from 'ember-wp-data/mirage-models/post';
+export { default } from 'ember-cli-wordpress/mirage-models/post';
