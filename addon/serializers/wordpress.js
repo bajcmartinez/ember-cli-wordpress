@@ -32,6 +32,9 @@ export default DS.RESTSerializer.extend({
     if (resourceHash.excerpt && resourceHash.excerpt.rendered) {
       resourceHash.excerpt = resourceHash.excerpt.rendered;
     }
+    if (resourceHash.featured_media == 0) {
+      resourceHash.featured_media = null;
+    }
     return this._super(modelClass, resourceHash, prop);
   },
 
